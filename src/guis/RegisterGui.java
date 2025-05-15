@@ -3,15 +3,11 @@ package guis;
 import javax.swing.*;
 import java.awt.*;
 
-/*
-   This Gui will allow user to login or launch the register gui
-   This extends from the BaseFrame which emans we will need to define our own addGuiComponent()
- */
-
-public class LoginGui extends BaseFrame {
-    public LoginGui() {
-        super("Banking App Login");
+public class RegisterGui extends BaseFrame{
+    public RegisterGui(){
+        super("Banking App Register");
     }
+
 
     @Override
     protected void addGuiComponents() {
@@ -20,10 +16,10 @@ public class LoginGui extends BaseFrame {
         JLabel bankingAppLabel = new JLabel("Banking Application");
 
         // set the location and the size of the gui component
-        bankingAppLabel.setBounds(x;0 y;20, super.getWidth(), height;40);
+        bankingAppLabel.setBounds(0, 20, super.getWidth(), 40);
 
         // change the fond style
-        bankingAppLabel.setFont(new Font(name;"Dialog", Font.BOLD, size;32));
+        bankingAppLabel.setFont(new Font("Dialog", Font.BOLD, 32));
 
         // centre text in JLabel
         bankingAppLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -37,8 +33,6 @@ public class LoginGui extends BaseFrame {
         // getWidth() returns us the width of our frame which is about 420
         usernameLabel.setBounds(20, 120, getWidth() - 30, 24);
 
-<<<<<<< Updated upstream
-=======
         usernameLabel.setFont(new Font("Dialog", Font.PLAIN, 20));
         add(usernameLabel);
 
@@ -54,36 +48,24 @@ public class LoginGui extends BaseFrame {
         passwordLabel.setFont(new Font("Dialog", Font.PLAIN, 20));
         add(passwordLabel);
 
-        // create password field
+        // Create password field
         JPasswordField passwordField = new JPasswordField();
         passwordField.setBounds(20, 260, getWidth() - 50, 40);
         passwordField.setFont(new Font("Dialog", Font.PLAIN, 28));
         add(passwordField);
 
-        // re-type password label
-        JLabel rePasswordLabel = new JLabel("Re-type Password");
-        rePasswordLabel.setBounds(20, 320, getWidth() - 50, 40);
-        rePasswordLabel.setFont(new Font("Dialog", Font.PLAIN, 20));
-        add(rePasswordLabel);
+        // Create Login button
+        JButton loginButton = new JButton("Login");
+        loginButton.setBounds(20, 460, getWidth() - 50, 40);
+        loginButton.setFont((new Font("Dialog", Font.BOLD, 20)));
+        add(loginButton);
 
-        // create re-type password field
-        JPasswordField rePasswordField = new JPasswordField();
-        rePasswordField.setBounds(20, 360, getWidth() - 50, 40);
-        rePasswordField.setFont(new Font("Dialog", Font.PLAIN, 28));
-        add(rePasswordField);
-
-        // create Register button
-        JButton registerButton = new JButton("Login");
-        registerButton.setBounds(20, 460, getWidth() - 50, 40);
-        registerButton.setFont((new Font("Dialog", Font.BOLD, 20)));
-        add(registerButton);
-
-        // create register label
+        // Create register label
         JLabel registerLabel = new JLabel("<html><a href=\"#\">Don't have an account? Register Here</a></html>");
         registerLabel.setBounds(0, 510, getWidth() - 10, 30);
         registerLabel.setFont(new Font("Dialog", Font.PLAIN, 20));
         registerLabel.setHorizontalAlignment(SwingConstants.CENTER);
         add(registerLabel);
->>>>>>> Stashed changes
+
     }
 }
